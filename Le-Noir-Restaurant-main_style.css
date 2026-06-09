@@ -1,0 +1,26 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;background:#0f0f0f;color:#e5e5e5;line-height:1.6;animation:fadeIn 0.5s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#000;border-bottom:1px solid #2a2a2a}
+.logo{font-size:1.4rem;font-weight:700;letter-spacing:3px}
+nav{font-size:0.8rem;color:#999;text-transform:uppercase;letter-spacing:2px}
+.hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#0f0f0f 0%,#1a1a1a 100%)}
+.hero h1{font-size:2.8rem;font-weight:400;margin-bottom:15px;animation:fadeIn 0.8s}
+.hero p{color:#aaa;margin-bottom:35px;animation:fadeIn 1s}
+.btn{display:inline-block;background:#c9a961;color:#000;text-decoration:none;padding:14px 32px;font-weight:700;text-transform:uppercase;letter-spacing:1px;transition:0.3s;border:none;animation:fadeIn 1.2s}
+.btn:hover{background:#d4b878;transform:translateY(-2px)}
+.menu{padding:80px 30px;max-width:900px;margin:0 auto}
+.menu h2{text-align:center;font-size:2.2rem;font-weight:300;margin-bottom:50px}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}
+.dish{border:1px solid #2a2a2a;padding:30px;text-align:center;transition:0.3s;animation:slideUp 0.6s;animation-fill-mode:both}
+.dish:nth-child(1){animation-delay:0.2s}
+.dish:nth-child(2){animation-delay:0.4s}
+.dish:nth-child(3){animation-delay:0.6s}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.dish:hover{border-color:#c9a961;transform:translateY(-8px)}
+.dish h3{font-size:1.3rem;margin-bottom:10px;font-weight:400}
+.dish p{color:#999;font-size:0.9rem;margin-bottom:15px;min-height:40px}
+.price{display:block;font-size:1.4rem;color:#c9a961;font-weight:700;margin-bottom:18px}
+footer{text-align:center;padding:25px;background:#000;color:#555;font-size:0.85rem}
+@media(max-width:768px){.dishes{grid-template-columns:1fr}}
+
