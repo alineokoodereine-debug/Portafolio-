@@ -8,29 +8,30 @@
 </head>
 <body>
 <header>
-<div class="logo">FASHION PH</div>
-<div>Port Harcourt</div>
+  <div class="logo">FASHION PH</div>
+  <div class="header-right">
+    <span>Port Harcourt</span>
+    <button class="wishlist-btn" onclick="toggleWishlist()" aria-label="Wishlist">
+      ♡ <span class="wishlist-count" id="wishlist-count">0</span>
+    </button>
+  </div>
 </header>
 
 <section class="hero">
 <h1>Trendy Fashion Store</h1>
-<p>Latest styles for every occasion. Order via WhatsApp.</p>
+  <p>Latest styles for every occasion. Order via WhatsApp.</p>
 </section>
 
 <main class="products">
-<article class="card">
-<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#e91e63"/><text x="100" y="105" text-anchor="middle" fill="#fff" font-size="20">Dress</text></svg>
-<h3>Classic Dress</h3>
-<p class="price">₦18,500</p>
-<a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Classic%20Dress">Order WhatsApp</a>
-</article>
-
-<article class="card">
-<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#222"/><text x="100" y="105" text-anchor="middle" fill="#fff" font-size="20">Top</text></svg>
-<h3>Fashion Top</h3>
-<p class="price">₦12,000</p>
-<a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Fashion%20Top">Order WhatsApp</a>
-</article>
+ <article class="card" data-id="1" data-name="Classic Dress" data-price="₦18,500" data-img="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80">
+    <div class="card-img-wrap">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80" alt="Classic Dress" loading="lazy">
+      <button class="heart" onclick="toggleWish(this)" aria-label="Add to wishlist">♡</button>
+    </div>
+    <h3>Classic Dress</h3>
+    <p class="price">₦18,500</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Classic%20Dress">Order WhatsApp</a>
+  </article>
 
 <article class="card">
 <svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#e91e63"/><text x="100" y="105" text-anchor="middle" fill="#fff" font-size="20">Jeans</text></svg>
@@ -39,26 +40,54 @@
 <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Skinny%20Jeans">Order WhatsApp</a>
 </article>
 
-<article class="card">
-<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#222"/><text x="100" y="105" text-anchor="middle" fill="#fff" font-size="20">Bag</text></svg>
-<h3>Luxury Handbag</h3>
-<p class="price">₦22,000</p>
-<a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Luxury%20Handbag">Order WhatsApp</a>
-</article>
+ <article class="card" data-id="2" data-name="Fashion Top" data-price="₦12,000" data-img="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&q=80">
+    <div class="card-img-wrap">
+      <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&q=80" alt="Fashion Top" loading="lazy">
+      <button class="heart" onclick="toggleWish(this)" aria-label="Add to wishlist">♡</button>
+    </div>
+    <h3>Fashion Top</h3>
+    <p class="price">₦12,000</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Fashion%20Top">Order WhatsApp</a>
+  </article>
 
-<article class="card">
-<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#e91e63"/><text x="100" y="105" text-anchor="middle" fill="#fff" font-size="20">Shoes</text></svg>
-<h3>Fashion Heels</h3>
-<p class="price">₦20,000</p>
-<a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Fashion%20Heels">Order WhatsApp</a>
-</article>
+ <article class="card" data-id="3" data-name="Skinny Jeans" data-price="₦15,500" data-img="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80">
+    <div class="card-img-wrap">
+      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80" alt="Skinny Jeans" loading="lazy">
+      <button class="heart" onclick="toggleWish(this)" aria-label="Add to wishlist">♡</button>
+    </div>
+    <h3>Skinny Jeans</h3>
+    <p class="price">₦15,500</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Skinny%20Jeans">Order WhatsApp</a>
+  </article>
 
-<article class="card">
-<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#222"/><text x="100" y="105" text-anchor="middle" fill="#fff" font-size="20">Gown</text></svg>
-<h3>Evening Gown</h3>
-<p class="price">₦28,500</p>
-<a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Evening%20Gown">Order WhatsApp</a>
-</article>
+  <article class="card" data-id="4" data-name="Luxury Handbag" data-price="₦22,000" data-img="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80">
+    <div class="card-img-wrap">
+      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80" alt="Luxury Handbag" loading="lazy">
+      <button class="heart" onclick="toggleWish(this)" aria-label="Add to wishlist">♡</button>
+    </div>
+    <h3>Luxury Handbag</h3>
+    <p class="price">₦22,000</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Luxury%20Handbag">Order WhatsApp</a>
+  </article>
+<article class="card" data-id="5" data-name="Fashion Heels" data-price="₦20,000" data-img="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&q=80">
+    <div class="card-img-wrap">
+      <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&q=80" alt="Fashion Heels" loading="lazy">
+      <button class="heart" onclick="toggleWish(this)" aria-label="Add to wishlist">♡</button>
+    </div>
+    <h3>Fashion Heels</h3>
+    <p class="price">₦20,000</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Fashion%20Heels">Order WhatsApp</a>
+  </article>
+  <article class="card" data-id="6" data-name="Evening Gown" data-price="₦28,500" data-img="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80">
+    <div class="card-img-wrap">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80" alt="Evening Gown" loading="lazy">
+      <button class="heart" onclick="toggleWish(this)" aria-label="Add to wishlist">♡</button>
+    </div>
+    <h3>Evening Gown</h3>
+    <p class="price">₦28,500</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%20price%20of%20Evening%20Gown">Order WhatsApp</a>
+  </article>
+  
 </main>
 
 <section class="social">
@@ -66,5 +95,91 @@
 </section>
 
 <footer>&copy; 2026 Trendy Fashion Store PH</footer>
+  
+<!-- Wishlist Panel -->
+<div class="wishlist-overlay" id="wishlist-overlay" onclick="toggleWishlist()"></div>
+<aside class="wishlist-panel" id="wishlist-panel">
+  <div class="wishlist-header">
+    <h2>Lista de Deseos ♡</h2>
+    <button onclick="toggleWishlist()" class="close-btn">✕</button>
+  </div>
+  <div class="wishlist-items" id="wishlist-items">
+    <p class="wishlist-empty">Aún no tienes artículos guardados.<br>Toca ♡ en cualquier producto.</p>
+  </div>
+  <div class="wishlist-footer" id="wishlist-footer" style="display:none">
+    <a class="btn btn-wa" id="wishlist-wa-btn" href="#">Pedir todo por WhatsApp</a>
+  </div>
+</aside>
+<script>
+const wishlist = new Map();
+function toggleWish(btn) {
+  const card = btn.closest('.card');
+  const id = card.dataset.id;
+  const name = card.dataset.name;
+  const price = card.dataset.price;
+  const img = card.dataset.img;
+  if (wishlist.has(id)) {
+    wishlist.delete(id);
+    btn.classList.remove('active');
+    btn.textContent = '♡';
+  } else {
+    wishlist.set(id, { name, price, img });
+    btn.classList.add('active');
+    btn.textContent = '♥';
+  }
+  updateWishlistUI();
+}
+function updateWishlistUI() {
+  const count = wishlist.size;
+  document.getElementById('wishlist-count').textContent = count;
+  const countEl = document.querySelector('.wishlist-count');
+  countEl.classList.toggle('has-items', count > 0);
+  const itemsEl = document.getElementById('wishlist-items');
+  const footer = document.getElementById('wishlist-footer');
+  if (count === 0) {
+    itemsEl.innerHTML = '<p class="wishlist-empty">Aún no tienes artículos guardados.<br>Toca ♡ en cualquier producto.</p>';
+    footer.style.display = 'none';
+    return;
+  }
+  let html = '';
+  let waText = 'Hola! Me interesan estos productos:%0A';
+  wishlist.forEach(({ name, price, img }) => {
+    html += `<div class="wish-item">
+      <img src="${img}" alt="${name}">
+      <div class="wish-info">
+        <span class="wish-name">${name}</span>
+        <span class="wish-price">${price}</span>
+      </div>
+      <button class="wish-remove" onclick="removeWish('${name}')">✕</button>
+    </div>`;
+    waText += `- ${name} (${price})%0A`;
+  });
+  itemsEl.innerHTML = html;
+  footer.style.display = 'block';
+  document.getElementById('wishlist-wa-btn').href =
+    'https://wa.me/234XXXXXXXXXX?text=' + waText;
+}
+function removeWish(name) {
+  wishlist.forEach((val, key) => {
+    if (val.name === name) {
+      wishlist.delete(key);
+      const hearts = document.querySelectorAll('.heart.active');
+      hearts.forEach(h => {
+        if (h.closest('.card').dataset.name === name) {
+          h.classList.remove('active');
+          h.textContent = '♡';
+        }
+      });
+    }
+  });
+  updateWishlistUI();
+}
+function toggleWishlist() {
+  const panel = document.getElementById('wishlist-panel');
+  const overlay = document.getElementById('wishlist-overlay');
+  panel.classList.toggle('open');
+  overlay.classList.toggle('open');
+}
+</script>
 </body>
 </html>
