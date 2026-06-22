@@ -22,5 +22,25 @@ nav{font-size:0.8rem;color:#999;text-transform:uppercase;letter-spacing:2px}
 .dish p{color:#999;font-size:0.9rem;margin-bottom:15px;min-height:40px}
 .price{display:block;font-size:1.4rem;color:#c9a961;font-weight:700;margin-bottom:18px}
 footer{text-align:center;padding:25px;background:#000;color:#555;font-size:0.85rem}
-@media(max-width:768px){.dishes{grid-template-columns:1fr}}
 
+
+.dish-img-wrap{width:100%;height:200px;overflow:hidden;margin-bottom:20px}
+.dish-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.dish:hover .dish-img-wrap img{transform:scale(1.06)}
+.about{padding:80px 30px;max-width:960px;margin:0 auto}
+.about h2{text-align:center;font-size:2.2rem;font-weight:300;margin-bottom:50px}
+.about-grid{display:flex;flex-direction:column;gap:50px}
+.about-card{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;border-top:1px solid #2a2a2a;padding-top:40px}
+.about-card:nth-child(even){direction:rtl}
+.about-card:nth-child(even) .about-text{direction:ltr}
+.about-img-wrap{width:100%;height:280px;overflow:hidden}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85);transition:filter 0.4s}
+.about-card:hover .about-img-wrap img{filter:brightness(1)}
+.about-text h3{font-size:1.6rem;font-weight:400;color:#c9a961;margin-bottom:14px}
+.about-text p{color:#aaa;font-size:0.95rem;line-height:1.8}
+@media(max-width:768px){
+  .dishes{grid-template-columns:1fr}
+  .about-card{grid-template-columns:1fr}
+  .about-card:nth-child(even){direction:ltr}
+  .about-img-wrap{height:220px}
+}
