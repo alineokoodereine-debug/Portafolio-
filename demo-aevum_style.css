@@ -4,7 +4,7 @@ body{font-family:system-ui,-apple-system,Arial,sans-serif;background:#111;color:
 header{display:flex;justify-content:space-between;align-items:center;padding:25px 40px;background:#0a0a0a;border-bottom:1px solid #222;animation:slideDown 0.5s}
 @keyframes slideDown{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}
 .logo{font-size:1.3rem;font-weight:700;letter-spacing:2px}
-.img{width:100%;height:100%;object-fit:cover}
+
 nav{font-size:0.85rem;color:#aaa;letter-spacing:1px}
 .hero{text-align:center;padding:100px 20px;background:linear-gradient(180deg,#111 0%,#1a1a1a 100%)}
 .hero h1{font-size:3rem;font-weight:300;letter-spacing:1px;margin-bottom:20px;animation:fadeIn 0.8s}
